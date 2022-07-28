@@ -1,0 +1,70 @@
+body {
+  background: #070707;
+  color:white;
+  font-size: 20px;
+  font-family: Arial;
+}
+h1{
+  font-size: 1.5em;
+}
+h1,p,li{
+  text-align: center;
+}
+ul{
+  padding: 0;
+}
+li{
+  list-style: none;
+  width: 100%;
+  margin: 0 0 5px 0;
+
+}
+label,input,#res,#botao{
+  font-size: 0.8em;
+}
+label{
+  display: block;
+}
+input{
+  display: block;
+  background: #272727;
+  color: #d2d2d2;
+  border: 0.1em solid #d2d2d2;
+  border-radius: 2px;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+#res{
+  color:#ffcd00;
+}
+#botao{
+  display: block;
+  background: #ff8500;
+  color:white;
+  height: 2em;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: 0.2em 0.2em #924e04;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  
+}
+#botao:active{
+  box-shadow:0 0 0 0 #924e04,inset 0.1em 0.1em #924e04;
+  transform: translate(0.2em, 0.2em);
+}
+@media(min-width:700px){
+  body{
+  font-size:60px;
+  }
+input{
+  border-radius: 7px;
+}
+li{
+  margin: 0 0 15px 0;
+}
+ 
+
+}
