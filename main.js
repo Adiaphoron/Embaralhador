@@ -8,9 +8,6 @@ const btn = document.getElementById('botao')
 function embaralhar(){
 const itens = [item1.value, item2.value,item3.value, item4.value]
 
- //Embaralha
-  itens.sort((a, b) => 0.5 - Math.random())
-
   if(itens[0].length == 0 || itens[1].length == 0 || itens[2].length == 0 || itens[3].length == 0){
     res.innerText = "PREENCHA TODOS OS CAMPOS"
     res.style.color = '#bf0e0e'
@@ -20,8 +17,13 @@ const itens = [item1.value, item2.value,item3.value, item4.value]
       res.style.color = '#ffcd00'}, 3000);
   }
   else{
-  res.innerText = itens.join(', ')
-  res.style.color = '#00ff40'
+    let i=itens.length-1
+    for(i; i>0; i-- ){
+      const k = Math.floor(Math.random()*(i+1));
+      [itens[i], itens[k]] = [itens[k], itens[i]];
+    }
+    res.innerText = itens.join(', ')
+    res.style.color = '#00ff40'
   }
 }
 btn.addEventListener("click", embaralhar)
